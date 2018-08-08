@@ -13,13 +13,13 @@ route.post('/', (req,res) => {
                pass: 'sabbysir'
            }
     });
-    maillist = `${req.body.email},harroshangames98@gmail.com`
+    maillist = `${req.body.email},sabbystudycentre123456@gmail.com`
     const mailOptions = {
         from: 'sabbystudycentrestudents@gmail.com', // sender address
         cc: `${maillist}`, // list of receivers
         subject: 'Subject of your email', // Subject line
         html: `Hi ${req.body.firstname} 
-        ${req.body.lastname}!/\n
+        ${req.body.lastname}! ${''} ${''}
         Welcome to Sabby with your opted course:- 
         ${req.body.course}.
         Seeing your bright future We will move ahead`
