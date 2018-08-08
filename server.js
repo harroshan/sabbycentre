@@ -6,7 +6,7 @@ const session = require('express-session')
 hbs.registerPartials('./views/partials')
 
 app.set('view engine','hbs')
-port = process.env.PORT || 4000
+port = process.env.PORT || 80
 app.use(express.json())
 app.use(express.urlencoded({extended  : true}))
 app.use('/', express.static(__dirname + '/public'))
