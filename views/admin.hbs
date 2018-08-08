@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sabby | Admin</title>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="/home.css">
+
+</head>
+<body>
+    {{> header}}
+
+    <h1 class="text-white bg-secondary p-sm-2 p-md-2" align="center">
+        ADMIN
+        <img src="/images/admin.png" style="height:30vh;">
+    </h1>
+
+    <div class="container text-secondary ">
+        <h2 class="p-md-2 d-inline-block">Add Notices</h2>
+        <h5 class="d-inline-block float-right p-2"><a href="/logout">LOGOUT</a></h5>
+        <div class="my-3 border shadow rounded bg-light p-3">
+        <form action="/a/d/min" method="POST" enctype="multipart/form-data" class="py-md-4 px-md-5">
+            <div class="form-group">
+                <b><label for="content">Notice</label></b>
+                <input type="text" class="form-control" required name="content" id="content" placeholder="Notice Content">
+            </div>
+            <div class="form-group">
+                <b><label for="class">Class</label></b>
+                <select id="class" required name="class" class="form-control">
+                    <option selected value="9">Class IX</option>
+                    <option value="10">Class X</option>
+                    <option value="11">Class XI</option>
+                    <option value="12">Class XII</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <b><label for="upload">Upload Notice</label></b>
+                <input type="file" name="uploadfile" required class="form-control-file btn" id="upload">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </form></div>
+    </div>
+
+    <div class="container my-2 px-md-5">
+        <div class="list-group">
+            {{#each contents}}
+                <form method="POST" action="/a/d/min/delete/?id={{id}}">
+                    <a href="/uploads/{{fileName}}" download class="list-group-item list-group-itme-action">
+                        <input type="submit" class="btn btn-danger p-2 mx-2" value="X">{{content}}
+                    </a>
+                </form>
+            {{/each}}
+        </div>
+    </div>
+
+    {{> footer}}
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+    box-sizing: border-box;
+    padding:0px;
+    margin:0px;
+    /* font-family: 'Modern Antiqua', cursive; */
+    font-family: "Raleway", sans-serif;
+}
+.head{
+    font-size:30px;
+    font-weight:900;
+}
+.team{
+    background:linear-gradient(49deg,#3d45b388 0,#eb4f6e85 25%,#3d45b381 50%,#eb4f6e7e 100%);
+    background-size: cover;
+    border-radius: 5%;
+    margin:auto;
+}
+.contact,.testimonial,.about{
+    letter-spacing: 3px;
+}
+.testimon{
+    border: 5px solid skyblue;
+    border-radius: 5%;
+}
+.testi{
+    text-align: justify;    
+}
+.rule1{
+    background:url(/images/carousel-3.png);
+    background-size: cover;
+}
+.rule2{
+    background: url(/images/carousel-2.jpg);
+    background-size: cover;
+}
+.rule3{
+    background: url(/images/carousel-1.jpg);
+    background-size: cover;
+}
+/* Cards */
+
+#sub {
+    box-shadow: 10px 10px 20px gray;
+    margin:10px auto;
+    width:24rem;
+}
+@media only screen and (max-width:768px){
+    #sub{
+        width:100%;
+    }
+    .head{
+        color:red
+        ;font-size:20px;
+        font-weight:900;
+    }
+    #map{
+        display:block;
+        margin:auto;
+    }
+    .scale{
+        transform-origin: bottom;
+        transform: scale(0.7);
+    }
+}
+.teach{
+    background: transparent;
+    border:0px;
+    width:16rem;
+    margin:0px auto;
+}
+#subimg {
+    height:300px;
+}
+#techimg{
+    height:250px;
+    border-radius:40%;
+}
+@media (min-width:768px){
+    #course{
+        width:30rem;
+    }
+    .testi{
+        width:75%;
+    }
+}

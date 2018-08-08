@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatibles" content="ie=edge">
+    <title>Notices | Sabby</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">        
+    <link rel="stylesheet" href="/home.css">
+
+</head>
+<body style="background:url(/images/bg-16.jpg);background-size:cover;font-weight:900;">
+    {{> header}}
+
+    <h1 class="text-white p-sm-2 p-md-2" style="background:url(/images/bg7.jpg);background-size:cover;" align="center">
+        NOTICES
+        <img src="/images/notice.jpeg" class="mx-md-3" style="height:30vh;">
+    </h1>
+
+    <div class="container my-sm-2 my-md-4">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active p-3" id="all-tab" style="background:transparent;" data-toggle="tab" href="#all" role="tab" aria-selected="true">ALL</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-3" id="12" data-toggle="tab" style="background:transparent;" href="#class12" role="tab" aria-selected="false">Class 12</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-3" id="11" data-toggle="tab" style="background:transparent;" href="#class11" role="tab" aria-selected="false">Class 11</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-3" id="10" data-toggle="tab" style="background:transparent;" href="#class10" role="tab" aria-selected="false">Class 10</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-3" id="09" data-toggle="tab" style="background:transparent;" href="#class09" role="tab" aria-selected="false">Class 09</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                <div class="list-group my-2 py-4 list-group-flush">
+                    {{#each contents}}
+                    <a href="/uploads/{{fileName}}" download style="background:transparent;" class="list-group-item list-group-action text-white"> (class : {{class}}) {{content}}</a>
+                    {{/each}}
+                </div>
+            </div>
+            {{!-- <div class="tab-pane fade" id="class12" role="tabpanel" aria-labelledby="12">
+                <div class="list-group my-2 py-4 list-group-flush">
+                    {{#each class12}}
+                    <a href="/uploads/{{fileName}}" download style="background:transparent;" class="list-group-item list-group-action">{{content}}</a>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="class11" role="tabpanel" aria-labelledby="11">
+                <div class="list-group py-4 my-2 list-group-flush">
+                    {{#each contents}}
+                    <a href="/uploads/{{fileName}}" download style="background:transparent;" class="list-group-item list-group-action">{{content}}</a>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="class10" role="tabpanel" aria-labelledby="10">
+                <div class="list-group py-4 my-2 list-group-flush">
+                    {{#each contents}}
+                    <a href="/uploads/{{fileName}}" download style="background:transparent;" class="list-group-item list-group-action">{{content}}</a>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="class09" role="tabpanel" aria-labelledby="9">
+                <div class="list-group py-4 my-2 list-group-flush">
+                    {{#each contents}}
+                    <a href="/uploads/{{fileName}}" download style="background:transparent;" class="list-group-item list-group-action">{{content}}</a>
+                    {{/each}}
+                </div>
+            </div> --}}
+        </div>
+    </div>
+
+    {{> footer}}
+</body>
+</html>

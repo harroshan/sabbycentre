@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sabby Admin Login</title>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="/home.css">
+
+</head>
+<body>
+    {{> header}}
+
+    <h1 class="text-white bg-secondary p-sm-2 p-md-2" align="center">
+        LOGIN
+        <img src="/images/login.jpg" style="height:30vh;">
+    </h1>
+
+    <div class="container p-3 p-md-5">
+        <div class="container p-md-5">
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <b><label for="username">Username</label></b>
+                    <input type="email" id="username" placeholder="username" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    <b><label for="password">Password</label></b>
+                    <input type="password" id="password" placeholder="Password" class="form-control" name="password">
+                </div>
+                <input type="submit" value="Login" class="btn btn-warning">
+            </form>
+        </div>
+    </div>
+
+    {{> footer}}
+</body>
+</html>

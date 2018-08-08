@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact | Sabby</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="/home.css">
+
+    
+    <style>
+        @media (max-width:768px){
+            #canvas{
+                display:none
+            }
+        }
+        #canvas{
+            height:400px;
+            width:500px;
+        }
+    </style>
+
+</head>
+<body style="background:url(/images/bg13.jpg);background-size:cover;font-weight:900;">
+    {{> header}}
+
+    <div class="text-white mt-3" style="background:rgba(108,117,125,0.5);">
+        <h1 align="center" class="p-2 my-md-2">
+            CONTACT US
+        </h1>
+        <p align="center" class="p-md-3">
+            <img src="/images/contact.png" style="height:35vh;border-radius:50%">
+        </p>
+    </div>
+
+    <h1 align="center" class="my-md-2">Reach Us</h1>
+
+    <div class="d-md-flex justify-content-around my-md-3">
+        <div>
+            <iframe id="canvas"
+                src="https://maps.google.com/maps?q=sabby%20study%20centre%20g&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+            </iframe>
+            <a href="https://www.pureblack.de/google-maps/"></a>
+        </div>
+        <div class="p-3">
+            <h2 align="center" style="letter-spacing:3px;">Address</h2>
+            <div>
+                <p><i class="fa fa-home mr-3"></i>D-12, KAMLA NAGAR 1st FLOOR</p>
+                <p><i class="fa fa-home mr-3"></i>D-43 MALKA GANJ, NEAR HANSRAJ COLLEGE</p>
+                <p><i class="fa fa-home mr-3"></i>101-G,OLD GUPTA COLONY, NEAR VIJAY NAGAR</p>
+                <p><i class="fa fa-envelope mr-3"></i>sabbystudycentre.com</p>
+                <p><i class="fa fa-phone mr-3"></i>+91-9811730694</p>
+                <p><i class="fa fa-phone mr-3"></i>+91-9212150694</p>
+                <p><i class="fa fa-phone mr-3"></i>+91-9818209543</p>            
+            </div>
+        </div>
+    </div>
+    
+    {{> footer}}
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration | Sabby</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="/home.css">
+
+</head>
+<body style="background: linear-gradient(49deg,#3d45b385 0,#eb4f6e83 25%,#3d45b381 50%,#eb4f6ea1 100%);">
+    {{> header}}
+
+    <div class="about text-white bg-secondary">
+        <h1 align="center" class="p-2 my-md-2 py-md-5">
+            REGISTRATION
+            <img src="/images/register.jpg" style="height:25vh" class="my-2 mx-md-3">
+        </h1>
+    </div>
+
+    <div class="container p-md-5">
+        <div class="my-3 p-md-5 p-3 border border-secondary shadow-lg rounded" style="background: transparent">
+            <form method="POST" action="/register">
+                <div class="form-group">
+                    <b><label for="firstname">FirstName</label></b>
+                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname">
+                </div>
+                <div class="form-group">
+                    <b><label for="lastname">LastName</label></b>
+                    <input type="text" required class="form-control" name="lastname" id="lastname" placeholder="Lastname">
+                </div>
+                <div class="form-group">
+                    <b><label for="class">Class</label></b>
+                    <select id="class" required name="class" class="form-control">
+                        <option selected>Class IX</option>
+                        <option>Class X</option>
+                        <option>Class XI</option>
+                        <option>Class XII</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <b><label for="course">Course</label></b>
+                    <select id="course" required name="course" class="form-control">
+                        <option selected>Accounts</option>
+                        <option>Mathematics</option>
+                        <option>Economics</option>
+                        <option>English</option>
+                        <option>Science</option>
+                        <option>Social Studies</option>
+                        <option>Business Study</option>
+                        <option>Information Practise</option>                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <b><label for="class">Class</label></b>
+                    <select id="class" required name="class" class="form-control">
+                        <option selected>Kamla Nagar</option>
+                        <option>Gupta Colony</option>
+                        <option>Malka Ganj</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <b><label for="contact">Contact</label></b>
+                    <input type="tel" required class="form-control" name="contact" id="contact" placeholder="Contact">
+                </div>
+                <div class="form-group">
+                    <b><label for="email">Email</label></b>
+                    <input type="email" required class="form-control" name="email" id="email" placeholder="a@g.com">
+                </div>
+                <input type="submit" class="btn btn-md-lg btn-primary" value="Register">
+            </form>
+        </div>
+    </div>
+
+    {{> footer}}
+</body>
+</html>
