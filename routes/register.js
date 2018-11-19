@@ -16,8 +16,8 @@ route.post('/', (req,res) => {
     maillist = `${req.body.email},sabbystudycentre123456@gmail.com`
     const mailOptions = {
         from: 'sabbystudycentrestudents@gmail.com', // sender address
-        cc: `${maillist}`, // list of receivers
-        subject: 'Subject of your email', // Subject line
+        to: `${req.body.email}`, // list of receivers
+        subject: 'Enrollment done', // Subject line
         html: `Hi ${req.body.firstname} 
         ${req.body.lastname}! ${''} ${''}
         Welcome to Sabby with your opted course:- 
