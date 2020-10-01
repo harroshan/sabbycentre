@@ -51,4 +51,8 @@ app.get('/contact',(req,res)=>{
     res.render('contact')
 })
 
+app.get('/help',(req,res)=>{
+    res.redirect('/home')
+})
+
 app.listen(port, () => console.log('Server started'))
