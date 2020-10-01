@@ -22,6 +22,12 @@ body {
     border: 5px solid skyblue;
     border-radius: 5%;
 }
+
+.testimonial{
+    border: 5px solid skyblue;
+    border-radius: 5%;
+    color: red;
+}
 .testi{
     text-align: justify;    
 }
@@ -38,6 +44,13 @@ body {
     background-size: cover;
 }
 /* Cards */
+
+#subscribe {
+    box-shadow: 20px 14px 20px gray;
+    margin:10px auto;
+    width:24rem;
+    height: 12rem;
+}
 
 #sub {
     box-shadow: 10px 10px 20px gray;
