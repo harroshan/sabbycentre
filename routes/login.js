@@ -6,6 +6,9 @@ const admin = {
     },
     "def@xyz.com" : {
         password : "hello456"
+    },
+    "admin@admin.com" : {
+        password: "admin"
     }
 }
 
